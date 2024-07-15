@@ -1,17 +1,6 @@
-// const mongoose = require('mongoose');
-// require('dotenv').config();
-
-// mongoose.connect(process.env.MONGODB_URI, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
-
-// module.exports = mongoose;
-
 
 const {connect} = require('mongoose');
 require('dotenv').config();
-// const db_url = process.env.MONGODB_URI;
 
 const mongoConnect = async(db_url)=>{
     try{

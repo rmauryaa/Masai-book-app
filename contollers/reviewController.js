@@ -12,10 +12,10 @@ exports.getReviewsForBook = async (req, res) => {
 exports.addReview = async (req, res) => {
   try {
     const { reviewText, rating } = req.body;
-    const userId = req.user.id;  // User ID from JWT
+    const userId = req.user.id; 
     const bookId = req.params.id;
 
-    // Fetch user from SQL database to ensure user exists
+  
     const [rows] = await db.query('SELECT * FROM users WHERE id = ?', [userId]);
     const user = rows[0];
 

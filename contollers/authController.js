@@ -42,13 +42,11 @@ exports.login = async (req, res) => {
     console.log('Generated JWT token:', token);
     console.log('Payload received from database:', payload);
 
-    // res.cookie('token', token, { httpOnly: true });
-
     req.session.token = token;
     req.session.username=user.username;
     console.log(req.session);
     
-    // console.log(req.token.payload);
+   
     res.json({ message: 'Logged in successfully' ,user:req.user});
   } catch (error) {
     console.error('Error during login:', error);
